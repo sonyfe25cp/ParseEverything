@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.parseeverything.result.NewsModel;
+import com.parseeverything.utils.NewsProvider;
 
 public class SinaNewsParser extends NewsPageParser {
 
@@ -19,7 +20,7 @@ public class SinaNewsParser extends NewsPageParser {
 
     @Override
     public boolean match(String url) {
-        return false;
+        return url.contains("sina.com.cn");
     }
 
     @Override
@@ -34,11 +35,12 @@ public class SinaNewsParser extends NewsPageParser {
         if (m.find()) {
             date = m.group(1);
         }
-        NewsModel model = new NewsModel(url);
+        NewsModel model = new NewsModel(url, NewsProvider.SinaNews);
         model.setTitle(title);
         model.setContent(content);
         model.setContentHtml(contentHtml);
         model.setDate(date);
+        model.setHtml(html);
         return model;
     }
 
