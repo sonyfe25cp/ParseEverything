@@ -1,7 +1,5 @@
 package com.parseeverything.result;
 
-import com.parseeverything.utils.NewsProvider;
-
 
 /**
  * 
@@ -23,17 +21,13 @@ public class NewsModel extends HtmlModel {
     private String url;
 
     private String html;//html原文
-    
-    private NewsProvider provider;
 
-	public NewsModel(String url, NewsProvider provider) {
-		super();
-		this.url = url;
-		this.provider = provider;
-	}
+    public NewsModel(String url) {
+        super();
+        this.url = url;
+    }
 
-
-	public String toString() {
+    public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("date:");
         sb.append(date);
@@ -112,13 +106,5 @@ public class NewsModel extends HtmlModel {
     public void setHtml(String html) {
         this.html = html;
     }
-
-	public NewsProvider getProvider() {
-		return provider;
-	}
-
-	public void setProvider(NewsProvider provider) {
-		this.provider = provider;
-	}
 
 }
