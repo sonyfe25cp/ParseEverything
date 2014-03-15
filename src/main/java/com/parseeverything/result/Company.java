@@ -4,15 +4,24 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.parseeverything.utils.CompanyProvider;
 
-public class Company {
 
+public class Company implements java.io.Serializable{
+
+
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
 
     public int id;
 
     public String name;
 
     public String fullname;
+    
+    public String alias;//别名
 
     public String tpID;
 
@@ -29,9 +38,20 @@ public class Company {
     public List<String> labels;
 
     public String desc;
+    
+    public CompanyProvider provider;
+    
+    public String url; //来源网址
+
+    
 
     public Company() {
         super();
+    }
+
+    public Company(CompanyProvider provider) {
+        super();
+        this.provider = provider;
     }
 
     public String toString() {
