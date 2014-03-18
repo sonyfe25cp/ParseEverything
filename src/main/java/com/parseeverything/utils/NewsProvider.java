@@ -9,6 +9,12 @@ package com.parseeverything.utils;
 public enum NewsProvider {
 
 	SinaNews,
-	NTV7
+	BeritaNational,
+	CommercialTimes,
+	Malaysiaportal,
+	MarChinaWeb,
+	EmbassyOfChinaInMala,
+	Ntv7,
+	MalaTv3,
 	;
 }

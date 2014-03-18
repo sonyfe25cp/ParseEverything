@@ -25,7 +25,7 @@ public class ChinaHrListParser extends JobListParser{
         Document document = Jsoup.parse(html);
         Elements tables = document.select(".joblist_b_border table");
         if(tables.size()> 0){
-            jobs = new ArrayList<>();
+            jobs = new ArrayList<Job>();
             for(Element table : tables){
                 Element firstTr = table.select("tr").first();
                 Elements tds = firstTr.select("td");
