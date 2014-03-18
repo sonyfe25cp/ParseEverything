@@ -47,7 +47,6 @@ public class MarChinaWebParser extends NewsPageParser{
 		model.setTitle(title);
 		model.setContent(content);
 		model.setContentHtml(contenthtml);
-		model.setDate("no date");
 		model.setHtml(html);
 		return model;
 		

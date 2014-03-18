@@ -32,7 +32,7 @@ public class TestNtv7NewsParser extends TestCase{
 		NewsModel news=n7vp.parse("http://www.ntv7.com.my/7edition/business-en/LOCAL_EN_1393923740.html", 
 				      Utils.getResouce("N7tvNewsParser-news-001.html"));
 		Assert.assertEquals("SUKUK MURABAHAH : PRASARANA ISSUES RM2 BILLION SUKUK FOR CAPEX AND WORKING CAPITAL",news.getTitle());
-		Assert.assertEquals("4 Mar 2014", news.getDate());
+		Assert.assertEquals("2014-03-04", news.getDate());
 		Assert.assertEquals("http://www.ntv7.com.my/7edition/business-en/LOCAL_EN_1393923740.html", news.getUrl());
 		System.out.println(news);
 	}
@@ -44,7 +44,7 @@ public class TestNtv7NewsParser extends TestCase{
 		NewsModel news=n7vp.parse("http://www.ntv7.com.my/7edition/local-en/HAZY_DAYS_SCHOOLS_TO_REOPEN_TOMORROW.html", 
 				      Utils.getResouce("N7tvNewsParser-news-002.html"));
 		Assert.assertEquals("HAZY DAYS : SCHOOLS TO REOPEN TOMORROW",news.getTitle());
-		Assert.assertEquals("16 Mar 2014", news.getDate());
+		Assert.assertEquals("2014-03-16", news.getDate());
 		Assert.assertEquals("http://www.ntv7.com.my/7edition/local-en/HAZY_DAYS_SCHOOLS_TO_REOPEN_TOMORROW.html", news.getUrl());
 		System.out.println(news);
 	}
@@ -56,7 +56,7 @@ public class TestNtv7NewsParser extends TestCase{
 		NewsModel news=n7vp.parse("http://www.ntv7.com.my/7edition/international-en/TRAGIC_RECRUITMENT_DRIVE_SEVERAL_KILLED_IN_STAMPEDE_AT_RECRUITMENT_EVENT_IN_NATIONAL_STADIUM.html", 
 				      Utils.getResouce("N7tvNewsParser-news-003.html"));
 		Assert.assertEquals("TRAGIC RECRUITMENT DRIVE : SEVERAL KILLED IN STAMPEDE AT RECRUITMENT EVENT IN NATIONAL STADIUM",news.getTitle());
-		Assert.assertEquals("16 Mar 2014", news.getDate());
+		Assert.assertEquals("2014-03-16", news.getDate());
 		Assert.assertEquals("http://www.ntv7.com.my/7edition/international-en/TRAGIC_RECRUITMENT_DRIVE_SEVERAL_KILLED_IN_STAMPEDE_AT_RECRUITMENT_EVENT_IN_NATIONAL_STADIUM.html", news.getUrl());
 		System.out.println(news);
 	}

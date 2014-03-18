@@ -45,6 +45,8 @@ public class EmbassyOfChinaInMalaParser extends NewsPageParser{
 		if(m.find()){
 			date=m.group(1);
 		}
+		String[] s1=date.split("/");
+		date=s1[0]+"-"+s1[1]+"-"+s1[2];
 		NewsModel model=new NewsModel(url,NewsProvider.EmbassyOfChinaInMala);
 		model.setTitle(title);
 		model.setContent(content);

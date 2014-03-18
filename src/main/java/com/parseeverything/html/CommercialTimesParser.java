@@ -46,11 +46,8 @@ public class CommercialTimesParser  extends NewsPageParser{
         }
         else
         	System.out.println("cannot find the date");
-        /*int index1=datetotal.indexOf("15");
-        int index2=datetotal.indexOf("March");
-        int index3=datetotal.indexOf("2014");
-        String date=datetotal.substring(index3, index3+4)+"-";
-        String month=datetotal.substring(index2, index2+5);
+        String[] s1=date.split(" ");
+        String month=s1[1];
         switch(month){
             case "January" :
         	    month="01";
@@ -89,7 +86,7 @@ public class CommercialTimesParser  extends NewsPageParser{
                 month="12";
                 break;
         }
-        date+=month+"-"+datetotal.substring(index1, index1+2);*/
+        date=s1[2]+"-"+month+"-"+s1[0];
         
 
         NewsModel model = new NewsModel(url, NewsProvider.CommercialTimes);

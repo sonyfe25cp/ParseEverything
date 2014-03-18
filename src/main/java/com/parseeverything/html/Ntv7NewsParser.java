@@ -45,6 +45,52 @@ public class Ntv7NewsParser extends NewsPageParser{
 		if(m.find()){
 			date=m.group(1);
 		}
+        String[] s1=date.split(" ");
+        String month=s1[1];
+        switch(month){
+            case "Jan" :
+        	    month="01";
+        	    break;
+            case "Feb" :
+                month="02";
+                break;
+            case "Mar" :
+                month="03";
+                break;
+            case "Apr" :
+                month="04";
+                break;
+            case "May" :
+                month="05";
+                break;
+            case "Jun" :
+                month="06";
+                break;
+            case "Jul" :
+                month="07";
+                break;
+            case "Aug" :
+                month="08";
+                break;
+            case "Sep" :
+                month="09";
+                break;
+            case "Oct" :
+                month="10";
+                break;
+            case "Nov" :
+                month="11";
+                break;
+            default:
+                month="12";
+                break;
+        }
+        if(s1[0].length()<2) 
+        {
+        	String day=s1[0];
+        	s1[0]="0"+day;
+        }
+        date=s1[2]+"-"+month+"-"+s1[0];
 		NewsModel model=new NewsModel(url,NewsProvider.Ntv7);
 		model.setTitle(title);
 		model.setContent(content);

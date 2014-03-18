@@ -14,6 +14,7 @@ import java.util.regex.Pattern;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,17 +39,25 @@ public class JakartaPostnewsParser extends NewsPageParser{
         Elements totalElement = doc.select(".story");
         String title = totalElement.select("h1").text();
         Elements contentElement = totalElement.select(".span-13");//后面的广告也加进去了，怎么除去？
-        String content =contentElement.text();
-        String contentHtml = contentElement.html();
+        String content="";
+        String contenthtml ="";
+        for(Element part:contentElement){
+        	if(part.tagName().equals("div"))
+        		part.remove();
+        	content+=part.text();
+            contenthtml+=part.html();
+        }
         Matcher m = datePattern.matcher(url);
         String date = "";
         if (m.find()) {
             date = m.group(1);
         }
+		String[] s1=date.split("/");
+		date=s1[0]+"-"+s1[1]+"-"+s1[2];
         NewsModel model = new NewsModel(url, NewsProvider.SinaNews);
         model.setTitle(title);
         model.setContent(content);
-        model.setContentHtml(contentHtml);
+        model.setContentHtml(contenthtml);
         model.setDate(date);
         model.setHtml(html);
         return model;

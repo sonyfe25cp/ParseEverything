@@ -63,6 +63,8 @@ public class MalaTv3NewsParser extends NewsPageParser{
 		if(m.find()){
 			date=m.group(1);
 		}
+		String[] s1=date.split("/");
+		date=s1[2]+"-"+s1[1]+"-"+s1[0];
 		NewsModel model=new NewsModel(url,NewsProvider.MalaTv3);
 		model.setTitle(title);
 		model.setContent(content);

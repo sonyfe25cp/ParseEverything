@@ -31,7 +31,7 @@ public class TestMalaysiaportalParser extends TestCase{
 		NewsModel news=mpp.parse("http://www.malaysia-today.net/najib-mh370-was-deliberately-turned-back/",
 				Utils.getResouce("Malaysiaprotal-news-001.html"));
 		Assert.assertEquals("NAJIB: MH370 WAS DELIBERATELY TURNED BACK", news.getTitle());
-		Assert.assertEquals("March 15, 2014",news.getDate());
+		Assert.assertEquals("2014-03-15",news.getDate());
 		Assert.assertEquals("http://www.malaysia-today.net/najib-mh370-was-deliberately-turned-back/",news.getUrl());
 		System.out.println(news);
 	}
@@ -42,7 +42,7 @@ public class TestMalaysiaportalParser extends TestCase{
 		NewsModel news=mpp.parse("http://www.malaysia-today.net/in-search-for-mh370-why-did-china-take-so-long-to-release-satellite-photos/",
 				Utils.getResouce("Malaysiaprotal-news-002.html"));
 		Assert.assertEquals("IN SEARCH FOR MH370, WHY DID CHINA TAKE SO LONG TO RELEASE SATELLITE PHOTOS?", news.getTitle());
-		Assert.assertEquals("March 13, 2014",news.getDate());
+		Assert.assertEquals("2014-03-13",news.getDate());
 		Assert.assertEquals("http://www.malaysia-today.net/in-search-for-mh370-why-did-china-take-so-long-to-release-satellite-photos/",news.getUrl());
 		System.out.println(news);
 	}
