@@ -16,5 +16,7 @@ public enum NewsProvider {
 	EmbassyOfChinaInMala,
 	Ntv7,
 	MalaTv3,
+	JakartaPost,
+	IndonesialJournal,
 	;
 }

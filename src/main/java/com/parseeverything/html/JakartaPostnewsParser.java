@@ -54,7 +54,7 @@ public class JakartaPostnewsParser extends NewsPageParser{
         }
 		String[] s1=date.split("/");
 		date=s1[0]+"-"+s1[1]+"-"+s1[2];
-        NewsModel model = new NewsModel(url, NewsProvider.SinaNews);
+        NewsModel model = new NewsModel(url, NewsProvider.JakartaPost);
         model.setTitle(title);
         model.setContent(content);
         model.setContentHtml(contenthtml);
