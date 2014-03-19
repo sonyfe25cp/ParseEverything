@@ -25,7 +25,7 @@ public class MarChinaWebParser extends NewsPageParser{
 	
 	@Override
 	public boolean match(String url){
-		return url.equals("http://mandarin.bernama.com/v3/index.php?sid=news&");
+		return url.contains("http://mandarin.bernama.com/v3/index.php?sid=news&");
 	}
 	
 	@Override

@@ -29,7 +29,7 @@ public class EmbassyOfChinaInMalaParser extends NewsPageParser{
 	
 	@Override
 	public boolean match(String url){
-		return url.equals("my.china-embassy.org/chn");
+		return url.contains("my.china-embassy.org/chn");
 	}
 	
 	@Override

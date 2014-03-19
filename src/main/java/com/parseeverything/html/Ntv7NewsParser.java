@@ -29,7 +29,7 @@ public class Ntv7NewsParser extends NewsPageParser{
 	
 	@Override
 	public boolean match(String url){
-		return url.equals("ntv7.com.my/7edition");
+		return url.contains("ntv7.com.my/7edition");
 	}
 	
 	@Override

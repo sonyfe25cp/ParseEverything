@@ -32,7 +32,7 @@ public class IndonesialJournalParser extends NewsPageParser{
 	
 	@Override
 	public boolean match(String url){
-		return url.equals("guojiribao.com/shtml/gjrb");
+		return url.contains("guojiribao.com/shtml/gjrb");
 	}
 	
 	@Override
@@ -57,7 +57,7 @@ public class IndonesialJournalParser extends NewsPageParser{
 		model.setContent(content);
 		model.setContentHtml(contenthtml);
 		model.setDate(date);
-		model.setUrl(url);
+		model.setHtml(html);
 		return model;
 		
 	}

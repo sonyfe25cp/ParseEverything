@@ -29,7 +29,7 @@ public class MalaysiaportalParser extends NewsPageParser{
 	
 	@Override
     public boolean match(String url){
-    	return url.equals("malaysia-today.net");
+    	return url.contains("malaysia-today.net");
     }
     
 	@Override

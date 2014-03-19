@@ -4,9 +4,9 @@
 package com.parseeverything.html;
 
 /**
- *解析商业时报business news
+ *解析新海峡时报
  * @author Mi Jing
- * @date 2014-3-15
+ * @date 2014-3-18
  */
 
 import java.util.regex.Matcher;
@@ -14,6 +14,7 @@ import java.util.regex.Pattern;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,31 +22,42 @@ import org.slf4j.LoggerFactory;
 import com.parseeverything.result.NewsModel;
 import com.parseeverything.utils.NewsProvider;
 
-public class CommercialTimesParser  extends NewsPageParser{
+public class NewStraitsTimesParser extends NewsPageParser{
 	
-    static Pattern datePattern = Pattern.compile("(\\d+\\s*\\w+\\s*\\d{4})");
-    static Logger logger = LoggerFactory.getLogger(CommercialTimesParser.class);
+    static Logger logger = LoggerFactory.getLogger(NewStraitsTimesParser.class);
+
+    static Pattern datePattern = Pattern.compile("(\\d{1,2}\\s*\\w+\\s*\\d{4})");
 
     @Override
-    public boolean match(String url){
-    	return url.contains("nst.com.my/business");
+    public boolean match(String url) {
+        return url.contains("nst.com.my");
     }
+
     @Override
-    public NewsModel parse(String url, String html){
+    public NewsModel parse(String url, String html) {
         Document doc = Jsoup.parse(html);
-        Elements header=doc.select(".article-header");
-        String title = header.select("h1").text();
-        Elements contentElement = doc.select(".news-article");
-        String content = contentElement.text();
-        String contentHtml = contentElement.html();
-        String datetotal =doc.select(".article-date").text();
-        Matcher m=datePattern.matcher(datetotal);
+        Elements titleElemt=doc.select(".article-header");
+        String title = titleElemt.select("h1").text();
+        String datetotal=doc.select(".article-date").select("span").text();
+        Element contentElement = doc.select(".news-article").first();
+        String content="";
+        String contenthtml = "";
+        for(Element part:contentElement.children()){
+        	if(part.tagName().equals("h2")){
+        		content+=part.text();
+        		contenthtml+="<h2>"+part.html()+"</h2>";
+        	}
+        	else if(part.tagName().equals("p")){
+        		content+=part.text();
+        		contenthtml+="<p>"+part.html()+"</p>";
+        	}
+        	
+        }
+        Matcher m = datePattern.matcher(datetotal);
         String date = "";
         if (m.find()) {
             date = m.group(1);
         }
-        else
-        	System.out.println("cannot find the date");
         String[] s1=date.split(" ");
         String month=s1[1];
         switch(month){
@@ -87,15 +99,14 @@ public class CommercialTimesParser  extends NewsPageParser{
                 break;
         }
         date=s1[2]+"-"+month+"-"+s1[0];
-        
-
-        NewsModel model = new NewsModel(url, NewsProvider.CommercialTimes);
+        NewsModel model = new NewsModel(url, NewsProvider.NewStraitsTimes);
         model.setTitle(title);
         model.setContent(content);
-        model.setContentHtml(contentHtml);
+        model.setContentHtml(contenthtml);
         model.setDate(date);
         model.setHtml(html);
         return model;
     }
+
 
 }

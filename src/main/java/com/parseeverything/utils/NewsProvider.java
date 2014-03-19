@@ -18,5 +18,11 @@ public enum NewsProvider {
 	MalaTv3,
 	JakartaPost,
 	IndonesialJournal,
+	NewStraitsTimes,
+	TheStarNews,
+	IndonesiShangBao,
+	AntaraNewsAgency,
+	IndonesianembassyChina,
+	ChinaIndonesiaEconomic,
 	;
 }

@@ -3,6 +3,12 @@
  */
 package webpageparser.html;
 
+/**
+*
+* @author Mi Jing
+* @date 2014-3-18
+*/
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -15,11 +21,7 @@ import com.parseeverything.result.NewsModel;
 
 import junit.framework.TestCase;
 
-/**
- *
- * @author Mi Jing
- * @date 2014-3-18
- */
+
 public class TestIndonesialJournalParser extends TestCase{
 	
 	static Logger logger=LoggerFactory.getLogger(TestIndonesialJournalParser.class);

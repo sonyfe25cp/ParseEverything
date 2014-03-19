@@ -31,7 +31,7 @@ public class MalaTv3NewsParser extends NewsPageParser{
 	
 	@Override
 	public boolean match(String url){
-		return url.equals("tv3.com.my/happenings");
+		return url.contains("tv3.com.my/happenings");
 	}
 	
 	@Override
