@@ -8,7 +8,6 @@ package com.parseeverything.html;
  * @author Mi Jing
  * @date 2014-3-18
  */
-//没写完
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

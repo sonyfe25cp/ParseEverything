@@ -4,7 +4,7 @@
 package com.parseeverything.html;
 
 /**
- *解析中国---印尼经贸合作网新闻
+ *解析中国-印尼经贸合作网新闻
  * @author Mi Jing
  * @date 2014-3-19
  */
