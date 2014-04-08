@@ -31,7 +31,7 @@ public class TestIndonesianembassyChinaParser extends TestCase{
         NewsModel news = icp.parse("http://indonesianembassy-china.org/2012/09/14/finding-a-secure-instant-online-loan/",
                 Utils.getResouce("IndonesianembassyChina-news-001.html"));
         Assert.assertEquals("Finding A Secure Instant Online Loan", news.getTitle());
-        Assert.assertEquals("2012-09-14", news.getDate());
+        Assert.assertEquals("2012-09-14", news.getPublishDate());
         Assert.assertEquals("http://indonesianembassy-china.org/2012/09/14/finding-a-secure-instant-online-loan/", news.getUrl());
         System.out.println(news);
     }
@@ -42,7 +42,7 @@ public class TestIndonesianembassyChinaParser extends TestCase{
         NewsModel news = icp.parse("http://indonesianembassy-china.org/2012/09/14/finding-a-cash-advance-online/",
                 Utils.getResouce("IndonesianembassyChina-news-002.html"));
         Assert.assertEquals("Finding A Cash Advance Online", news.getTitle());
-        Assert.assertEquals("2012-09-14", news.getDate());
+        Assert.assertEquals("2012-09-14", news.getPublishDate());
         Assert.assertEquals("http://indonesianembassy-china.org/2012/09/14/finding-a-cash-advance-online/", news.getUrl());
         System.out.println(news);
     }

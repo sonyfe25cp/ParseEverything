@@ -22,7 +22,7 @@ public class TestSinaNewsParser extends TestCase {
         NewsModel news = snp.parse("http://news.sina.com.cn/c/2014-03-07/114629648141.shtml",
                 Utils.getResouce("sina-news-001.html"));
         Assert.assertEquals("李阳疯狂英语长沙校区关张 学生学费没退款", news.getTitle());
-        Assert.assertEquals("2014-03-07", news.getDate());
+        Assert.assertEquals("2014-03-07", news.getPublishDate());
         Assert.assertEquals("http://news.sina.com.cn/c/2014-03-07/114629648141.shtml", news.getUrl());
         System.out.println(news);
     }
@@ -33,7 +33,7 @@ public class TestSinaNewsParser extends TestCase {
         NewsModel news = snp.parse("http://news.sina.com.cn/c/2014-03-07/100729647177.shtml",
                 Utils.getResouce("sina-news-002.html"));
         Assert.assertEquals("王岐山两会赞陈道明:这些腕儿甘于清贫", news.getTitle());
-        Assert.assertEquals("2014-03-07", news.getDate());
+        Assert.assertEquals("2014-03-07", news.getPublishDate());
         Assert.assertEquals("http://news.sina.com.cn/c/2014-03-07/100729647177.shtml", news.getUrl());
         System.out.println(news);
     }

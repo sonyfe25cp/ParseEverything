@@ -31,9 +31,9 @@ public class TestIndonesialJournalParser extends TestCase{
 		IndonesialJournalParser ijp=new IndonesialJournalParser();
 		NewsModel news=ijp.parse("http://www.guojiribao.com/shtml/gjrb/20140318/152445.shtml",
 				  Utils.getResouce("IndonesialJournal-news-001.html"));
-		System.out.println(news.getDate());
+		System.out.println(news.getPublishDate());
 		Assert.assertEquals("苏西洛在万杜尔参加民主党竞选活动",news.getTitle());
-		Assert.assertEquals("2014-03-18",news.getDate());
+		Assert.assertEquals("2014-03-18",news.getPublishDate());
 		Assert.assertEquals("http://www.guojiribao.com/shtml/gjrb/20140318/152445.shtml", news.getUrl());
 		System.out.println(news);
 	}
@@ -43,9 +43,9 @@ public class TestIndonesialJournalParser extends TestCase{
 		IndonesialJournalParser ijp=new IndonesialJournalParser();
 		NewsModel news=ijp.parse("http://www.guojiribao.com/shtml/gjrb/20140318/152452.shtml",
 				  Utils.getResouce("IndonesialJournal-news-002.html"));
-		System.out.println(news.getDate());
+		System.out.println(news.getPublishDate());
 		Assert.assertEquals("工业部设法调降机械进口量",news.getTitle());
-		Assert.assertEquals("2014-03-18",news.getDate());
+		Assert.assertEquals("2014-03-18",news.getPublishDate());
 		Assert.assertEquals("http://www.guojiribao.com/shtml/gjrb/20140318/152452.shtml", news.getUrl());
 		System.out.println(news);
 	}
@@ -55,9 +55,9 @@ public class TestIndonesialJournalParser extends TestCase{
 		IndonesialJournalParser ijp=new IndonesialJournalParser();
 		NewsModel news=ijp.parse("http://www.guojiribao.com/shtml/gjrb/20140318/152449.shtml",
 				  Utils.getResouce("IndonesialJournal-news-003.html"));
-		System.out.println(news.getDate());
+		System.out.println(news.getPublishDate());
 		Assert.assertEquals("国会:须招商兴建跨苏岛高速公路",news.getTitle());
-		Assert.assertEquals("2014-03-18",news.getDate());
+		Assert.assertEquals("2014-03-18",news.getPublishDate());
 		Assert.assertEquals("http://www.guojiribao.com/shtml/gjrb/20140318/152449.shtml", news.getUrl());
 		System.out.println(news);
 	}

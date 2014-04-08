@@ -31,7 +31,7 @@ public class TestAntaraNewsAgencyParser extends TestCase{
         NewsModel news = anap.parse("http://www.antaranews.com/en/news/93254/japan-plans-to-send-home-remains-of-20-thousand-soldiers",
                 Utils.getResouce("AntaraNewsAgency-news-001.html"));
         Assert.assertEquals("Japan plans to send home remains of 20 thousand soldiers", news.getTitle());
-        Assert.assertEquals("2014-03-19", news.getDate());
+        Assert.assertEquals("2014-03-19", news.getPublishDate());
         Assert.assertEquals("http://www.antaranews.com/en/news/93254/japan-plans-to-send-home-remains-of-20-thousand-soldiers", news.getUrl());
         System.out.println(news);
     }
@@ -42,7 +42,7 @@ public class TestAntaraNewsAgencyParser extends TestCase{
         NewsModel news = anap.parse("http://www.antaranews.com/en/news/93131/rupiah-strengthens-at-rp11372-on-monday-evening",
                 Utils.getResouce("AntaraNewsAgency-news-002.html"));
         Assert.assertEquals("Rupiah strengthens at Rp11,372 on Monday evening", news.getTitle());
-        Assert.assertEquals("2014-03-10", news.getDate());
+        Assert.assertEquals("2014-03-10", news.getPublishDate());
         Assert.assertEquals("http://www.antaranews.com/en/news/93131/rupiah-strengthens-at-rp11372-on-monday-evening", news.getUrl());
         System.out.println(news);
     }

@@ -24,5 +24,6 @@ public enum NewsProvider {
 	AntaraNewsAgency,
 	IndonesianembassyChina,
 	ChinaIndonesiaEconomic,
+	shougong
 	;
 }

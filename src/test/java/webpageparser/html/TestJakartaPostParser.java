@@ -32,7 +32,7 @@ public class TestJakartaPostParser extends TestCase{
         NewsModel news = jpp.parse("http://www.thejakartapost.com/news/2014/03/16/indonesia-needs-tax-savvy-leader-ngos.html",
                 Utils.getResouce("JakartaPost-news-001.html"));
         Assert.assertEquals("Indonesia needs tax-savvy leader: NGOs", news.getTitle());
-        Assert.assertEquals("2014-03-16", news.getDate());
+        Assert.assertEquals("2014-03-16", news.getPublishDate());
         Assert.assertEquals("http://www.thejakartapost.com/news/2014/03/16/indonesia-needs-tax-savvy-leader-ngos.html", news.getUrl());
         System.out.println(news);
     }
@@ -44,7 +44,7 @@ public class TestJakartaPostParser extends TestCase{
         NewsModel news = jpp.parse("http://www.thejakartapost.com/news/2014/03/15/pln-struggles-resolve-power-crisis-n-sumatra.html",
                 Utils.getResouce("JakartaPost-news-002.html"));
         Assert.assertEquals("PLN struggles to resolve power crisis in N. Sumatra", news.getTitle());
-        Assert.assertEquals("2014-03-15", news.getDate());
+        Assert.assertEquals("2014-03-15", news.getPublishDate());
         Assert.assertEquals("http://www.thejakartapost.com/news/2014/03/15/pln-struggles-resolve-power-crisis-n-sumatra.html", news.getUrl());
         System.out.println(news);
     }
@@ -56,7 +56,7 @@ public class TestJakartaPostParser extends TestCase{
         NewsModel news = jpp.parse("http://www.thejakartapost.com/news/2014/03/17/another-group-60-migrants-tries-enter-us.html",
                 Utils.getResouce("JakartaPost-news-003.html"));
         Assert.assertEquals("Another group of 60 migrants tries to enter US", news.getTitle());
-        Assert.assertEquals("2014-03-17", news.getDate());
+        Assert.assertEquals("2014-03-17", news.getPublishDate());
         Assert.assertEquals("http://www.thejakartapost.com/news/2014/03/17/another-group-60-migrants-tries-enter-us.html", news.getUrl());
         System.out.println(news);
     }

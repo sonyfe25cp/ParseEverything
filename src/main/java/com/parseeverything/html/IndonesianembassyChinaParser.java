@@ -50,7 +50,7 @@ public class IndonesianembassyChinaParser extends NewsPageParser{
         model.setTitle(title);
         model.setContent(content);
         model.setContentHtml(contentHtml);
-        model.setDate(date);
+        model.setPublishDate(date);
         model.setHtml(html);
         return model;
     }

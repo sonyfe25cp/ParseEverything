@@ -33,7 +33,7 @@ public class TestMalaTv3NewsParser extends TestCase{
 				  Utils.getResouce("MalaTv3News-001.html"));
 		System.out.println(news.getTitle()+"hello");
 		Assert.assertEquals("Siaran Media: Jelajah AJL28", news.getTitle());
-		Assert.assertEquals("2014-01-13", news.getDate());
+		Assert.assertEquals("2014-01-13", news.getPublishDate());
 		Assert.assertEquals("http://www.tv3.com.my/happenings/press_release/Siaran_Media_Jelajah_AJL28.html", news.getUrl());
 		System.out.println(news);
 	}
@@ -46,7 +46,7 @@ public class TestMalaTv3NewsParser extends TestCase{
 				  Utils.getResouce("MalaTv3News-002.html"));
 		System.out.println(news.getTitle()+"hello");
 		Assert.assertEquals("Perubahan Jadual TV3 Tahun 2014", news.getTitle());
-		Assert.assertEquals("2014-01-02", news.getDate());
+		Assert.assertEquals("2014-01-02", news.getPublishDate());
 		Assert.assertEquals("http://www.tv3.com.my/happenings/events/Perubahan_Jadual_TV3_Tahun_2014.html", news.getUrl());
 		System.out.println(news);
 	}

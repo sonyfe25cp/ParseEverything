@@ -32,7 +32,7 @@ public class TestTheStarNewsParser extends TestCase{
         NewsModel news = tsnp.parse("http://www.thestar.com.my/Business/Business-News/2014/03/18/Msia-China-ramping-up-RandD-report/",
                 Utils.getResouce("TheStarNews-001.html"));
         Assert.assertEquals("Malaysia, China ramping up R&D, says report", news.getTitle());
-        Assert.assertEquals("2014-03-18", news.getDate());
+        Assert.assertEquals("2014-03-18", news.getPublishDate());
         Assert.assertEquals("http://www.thestar.com.my/Business/Business-News/2014/03/18/Msia-China-ramping-up-RandD-report/", news.getUrl());
         System.out.println(news);
     }
@@ -43,7 +43,7 @@ public class TestTheStarNewsParser extends TestCase{
         NewsModel news = tsnp.parse("http://www.thestar.com.my/News/Nation/2014/03/18/Missing-MH370-Not-terror-hub/",
                 Utils.getResouce("TheStarNews-002.html"));
         Assert.assertEquals("Missing MH370: Malaysia not a terror hub, says Hisham", news.getTitle());
-        Assert.assertEquals("2014-03-18", news.getDate());
+        Assert.assertEquals("2014-03-18", news.getPublishDate());
         Assert.assertEquals("http://www.thestar.com.my/News/Nation/2014/03/18/Missing-MH370-Not-terror-hub/", news.getUrl());
         System.out.println(news);
     }
@@ -54,7 +54,7 @@ public class TestTheStarNewsParser extends TestCase{
         NewsModel news = tsnp.parse("http://www.thestar.com.my/News/World/2014/03/18/Libyan-port-rebels-say-US-seizure-of-oil-tanker-act-of-piracy/",
                 Utils.getResouce("TheStarNews-003.html"));
         Assert.assertEquals("Libyan port rebels say U.S. seizure of oil tanker act of piracy", news.getTitle());
-        Assert.assertEquals("2014-03-18", news.getDate());
+        Assert.assertEquals("2014-03-18", news.getPublishDate());
         Assert.assertEquals("http://www.thestar.com.my/News/World/2014/03/18/Libyan-port-rebels-say-US-seizure-of-oil-tanker-act-of-piracy/", news.getUrl());
         System.out.println(news);
     }

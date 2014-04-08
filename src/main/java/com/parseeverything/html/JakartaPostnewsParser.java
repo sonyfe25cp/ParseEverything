@@ -59,7 +59,7 @@ public class JakartaPostnewsParser extends NewsPageParser{
         model.setTitle(title);
         model.setContent(content);
         model.setContentHtml(contenthtml);
-        model.setDate(date);
+        model.setPublishDate(date);
         model.setHtml(html);
         return model;
     }

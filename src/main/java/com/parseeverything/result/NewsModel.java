@@ -12,7 +12,7 @@ public class NewsModel extends HtmlModel {
 
     private int id;
 
-    private String date;
+    private String publishDate;
 
     private String title;//标题
 
@@ -32,11 +32,13 @@ public class NewsModel extends HtmlModel {
 		this.provider = provider;
 	}
 
-
+	public NewsModel() {
+		super();
+	}
 	public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("date:");
-        sb.append(date);
+        sb.append("publishDate:");
+        sb.append(publishDate);
         sb.append("\n");
         sb.append("title:");
         sb.append(title);
@@ -57,15 +59,18 @@ public class NewsModel extends HtmlModel {
 
     }
 
-    public String getDate() {
-        return date;
-    }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
+    public String getPublishDate() {
+		return publishDate;
+	}
 
-    public String getTitle() {
+
+	public void setPublishDate(String publishDate) {
+		this.publishDate = publishDate;
+	}
+
+
+	public String getTitle() {
         return title;
     }
 

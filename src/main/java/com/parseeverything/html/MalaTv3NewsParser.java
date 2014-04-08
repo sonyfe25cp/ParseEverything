@@ -69,7 +69,7 @@ public class MalaTv3NewsParser extends NewsPageParser{
 		model.setTitle(title);
 		model.setContent(content);
 		model.setContentHtml(contenthtml);
-		model.setDate(date);
+		model.setPublishDate(date);
 		model.setHtml(html);
 		return model;
 	}

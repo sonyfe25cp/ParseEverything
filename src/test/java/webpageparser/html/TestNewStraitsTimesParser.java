@@ -32,10 +32,10 @@ public class TestNewStraitsTimesParser extends TestCase{
     	NewStraitsTimesParser nstp = new NewStraitsTimesParser();
         NewsModel news = nstp.parse("http://www.nst.com.my/world/eu-ready-to-resume-business-with-iran-on-jan-20-1.519640",
                 Utils.getResouce("NewStraitsTimes-news-001.html"));
-        System.out.println(news.getDate());
+        System.out.println(news.getPublishDate());
         System.out.println(news.getTitle());
         Assert.assertEquals("EU ready to resume business with Iran on Jan 20", news.getTitle());
-        Assert.assertEquals("2014-03-18", news.getDate());
+        Assert.assertEquals("2014-03-18", news.getPublishDate());
         Assert.assertEquals("http://www.nst.com.my/world/eu-ready-to-resume-business-with-iran-on-jan-20-1.519640", news.getUrl());
         System.out.println(news);
     }
@@ -46,7 +46,7 @@ public class TestNewStraitsTimesParser extends TestCase{
         NewsModel news = nstp.parse("http://www.nst.com.my/business/latest/oil-prices-mixed-in-asia-1.519190",
                 Utils.getResouce("NewStraitsTimes-news-002.html"));
         Assert.assertEquals("Oil prices mixed in Asia", news.getTitle());
-        Assert.assertEquals("2014-03-18", news.getDate());
+        Assert.assertEquals("2014-03-18", news.getPublishDate());
         Assert.assertEquals("http://www.nst.com.my/business/latest/oil-prices-mixed-in-asia-1.519190", news.getUrl());
         System.out.println(news);
     }
@@ -57,7 +57,7 @@ public class TestNewStraitsTimesParser extends TestCase{
         NewsModel news = nstp.parse("http://www.nst.com.my/nation/general/i-m-a-stronger-underdog-1.518461",
                 Utils.getResouce("NewStraitsTimes-news-003.html"));
         Assert.assertEquals("'I'm a stronger underdog'", news.getTitle());
-        Assert.assertEquals("2014-03-18", news.getDate());
+        Assert.assertEquals("2014-03-18", news.getPublishDate());
         Assert.assertEquals("http://www.nst.com.my/nation/general/i-m-a-stronger-underdog-1.518461", news.getUrl());
         System.out.println(news);
     }
