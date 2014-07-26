@@ -1,4 +1,4 @@
-package com.parseeverthing.pages;
+package com.parseeverything.pages;
 
 /**
  * Thrown if something goes wrong when storing pages.

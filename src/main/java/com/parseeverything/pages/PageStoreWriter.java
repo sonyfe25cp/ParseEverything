@@ -1,4 +1,4 @@
-package com.parseeverthing.pages;
+package com.parseeverything.pages;
 
 import java.io.*;
 import java.util.*;
