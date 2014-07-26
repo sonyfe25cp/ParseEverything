@@ -43,8 +43,8 @@ public class NewsModel extends HtmlModel {
         sb.append("title:");
         sb.append(title);
         sb.append("\n");
-//        sb.append("content:");
-//        sb.append(content);
+        sb.append("content:");
+        sb.append(content);
         sb.append("\n");
 //        sb.append("contentHtml:");
 //        sb.append(contentHtml);

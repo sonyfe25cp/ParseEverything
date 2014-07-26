@@ -1,6 +1,7 @@
 package com.parseeverything.pages;
 
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class StoredPage {
 	private Map<String, String> headers = new LinkedHashMap<String, String>();
