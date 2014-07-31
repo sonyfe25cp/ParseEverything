@@ -48,7 +48,7 @@ public class SinaNewsParser extends NewsPageParser {
                 String text = dateEle.text();
                 if(text.contains("日")){
                     text = text.substring(0, text.indexOf("日"));
-                    System.out.println(text);
+//                    System.out.println(text);
                     date = text.replaceAll("[年月]", "-");
                 }
             }

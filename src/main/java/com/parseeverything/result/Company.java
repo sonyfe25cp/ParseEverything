@@ -9,10 +9,6 @@ import com.parseeverything.utils.CompanyProvider;
 
 public class Company implements java.io.Serializable{
 
-
-    /**
-     * 
-     */
     private static final long serialVersionUID = 1L;
 
     public int id;
