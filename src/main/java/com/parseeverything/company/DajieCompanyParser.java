@@ -12,6 +12,7 @@ import com.parseeverything.utils.CompanyProvider;
 
 public class DajieCompanyParser extends CompanyParser {
     static Logger logger = LoggerFactory.getLogger(DajieCompanyParser.class);
+
     @Override
     public boolean match(String url) {
         return url.contains("www.dajie.com");
@@ -36,7 +37,7 @@ public class DajieCompanyParser extends CompanyParser {
                 Element element = trs.get(index + 1);
 //                logger.info("text, index ind {}, {}", text, ind);
                 String value = getValue(element, ind);
-                if(value.equals("暂无")||value.equals("")){
+                if (value.equals("暂无") || value.equals("")) {
                     continue;
                 }
                 switch (text) {
